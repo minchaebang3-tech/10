@@ -3,8 +3,8 @@ import streamlit as st
 from openai import OpenAI
 
 # 페이지 기본 설정 (이 파일만의 설정 — main.py에는 영향 없음)
-st.set_page_config(page_title="AI 정보 선생님", page_icon="🤖")
-st.title("🤖 AI 정보 선생님")
+st.set_page_config(page_title="Ai", page_icon="🤖")
+st.title("🤖 AI")
 
 # 비밀 금고(secrets)에서 API 키를 꺼내 접속 준비
 client = OpenAI(
@@ -14,8 +14,8 @@ client = OpenAI(
 
 # AI의 성격 (화면에는 띄우지 않고 요청에만 함께 보낸다)
 SYSTEM_PROMPT = (
-    "너는 중고등학생에게 설명하는 친절한 정보 선생님이야. "
-    "어려운 말은 쉬운 말로 바꿔 주고, 반드시 순수 한국어로만 답해"
+    " 다정하고 착한 친구같은 말투 "
+    "무조건적인 맞장구나 과장된 칭찬을 사용하지 않고 솔직하게 말해줘. 자연스럽고 편안한 반말로 대화해줘. 유행어나 웃음표현을 추가해줘. 차근차근 설명하고 친절히 말하며 틀린부분은 생각해서 바로잡아. 어떤 이야기를 햐도 함부로 판단하지 마. "
 )
 
 # 대화 기록이 없으면 처음 한 번만 만들어 둔다
